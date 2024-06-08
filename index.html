@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Countdown Timer with Fireworks</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles1.css">
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="video-background">
+        <video id="bg-video" loop muted autoplay playsinline webkit-playsinline preload="auto">
+          <source src="flag.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+    </div>
+  <!-- Countdown Timer -->
+  <section id="count" class="container">
+    <div class="countdown-container container">
+      <div class="heading-container">
+        <h1 class="front-text" style="font-family: 'NTBrickSans', sans-serif;">Hackathon Ends in 🏁:</h1>
+      </div>
+      <div class="clock row">
+        <div class="clock-item clock-days countdown-time-value col-sm-6 col-md-3">
+          <div class="wrap">
+            <div class="inner">
+              <div id="canvas_days" class="clock-canvas"></div>
+              <div class="text">
+                <p class="val">0</p>
+                <p class="type-days type-time">DAYS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clock-item clock-hours countdown-time-value col-sm-6 col-md-3">
+          <div class="wrap">
+            <div class="inner">
+              <div id="canvas_hours" class="clock-canvas"></div>
+              <div class="text">
+                <p class="val">0</p>
+                <p class="type-hours type-time">HOURS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clock-item clock-minutes countdown-time-value col-sm-6 col-md-3">
+          <div class="wrap">
+            <div class="inner">
+              <div id="canvas_minutes" class="clock-canvas"></div>
+              <div class="text">
+                <p class="val">0</p>
+                <p class="type-minutes type-time">MINUTES</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clock-item clock-seconds countdown-time-value col-sm-6 col-md-3">
+          <div class="wrap">
+            <div class="inner">
+              <div id="canvas_seconds" class="clock-canvas"></div>
+              <div class="text">
+                <p class="val">0</p>
+                <p class="type-seconds type-time">SECONDS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fireworks Container -->
+  <div id="fireworks-container" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></div>
+
+  <!-- Fireworks.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/fireworks-js@1.4.1/dist/fireworks.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+@media only screen and (min-width: 1367px) {
+
+
+* {
+    font-size: 16px; /* Default font size */
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fonts */
+  @font-face {
+    font-family: 'Montserrat Semi-Bold';
+    src: url('fonts/static/Montserrat-SemiBold.ttf') format('woff2'),
+         url('fonts/static/Montserrat-SemiBold.ttf') format('woff');
+    font-weight: 600;
+    font-style: normal; 
+  }
+  
+  @font-face {
+    font-family: 'Montserrat Bold';
+    src: url('fonts/static/Montserrat-Bold.ttf') format('woff2'),
+         url('fonts/static/Montserrat-Bold.ttf') format('woff');
+    font-weight: bold;
+    font-style: normal; 
+  }
+  
+  @font-face {
+    font-family: 'Poppins Semi-Bold';
+    src: url('fonts/poppins/Poppins-SemiBold.ttf') format('woff2'),
+         url('fonts/poppins/Poppins-SemiBold.ttf') format('woff');
+    font-weight: bold;
+    font-style: normal; 
+  }
+  
+  @font-face {
+    font-family: 'Bricks Sans';
+    src: url('fonts/brics/HvDTrial_BrixSans-Regular-BF64c3379310193.otf') format('woff2'),
+         url('fonts/brics/HvDTrial_BrixSans-Regular-BF64c3379310193.otf') format('woff');
+    font-weight: normal; 
+    font-style: normal; 
+  }
+  
+  @font-face {
+    font-family: 'NTBrickSans';
+    src: url('fonts/NTBrickSans/NTBrickSans.woff2') format('woff2'),
+         url('fonts/NTBrickSans/NTBrickSans.woff') format('woff'),
+         url('fonts/NTBrickSans/NTBrickSans.ttf') format('truetype'),
+         url('fonts/NTBrickSans/NTBrickSans.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Body styles */
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #5a1929, #312424, #5a1929);
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  /* Video background */
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .video-background video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .countdown-container {
+    padding: 40px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 5%, rgba(200, 21, 67, 1) 95%, rgba(200, 21, 67, 1) 100%);
+    border-radius: 20px;
+    margin-top: 20%;
+    margin-right: 50px;
+    margin-left: 50px;
+    background-size: 100% 200%;
+    animation: dropDown 5s infinite;
+    max-width: 100%;
+    height: 390px;
+}
+@keyframes decreaseColor {
+    0% {
+        box-shadow: inset 0 0 0 0 rgba(230, 236, 236, 0.129); /* Start with full aqua color */
+    }
+    100% {
+        box-shadow: inset 0 0 0 100px transparent; /* End with no color (transparent) */
+    }
+  }
+  
+  .clock-item .inner {
+    /* height: 0px; */
+    position: relative;
+    width: 160px;
+    max-height: 1px;
+  }
+  
+  .clock-canvas {
+    background-color: transparent;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    height: 0px;
+    padding-bottom: 100%;
+    animation: decreaseColor 5s linear infinite; /* Apply animation */
+  }
+  
+  .text {
+    color: #fff;
+    top: -190px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    width: 100%;
+  }
+  
+  .text .val {
+    font-size: 56px;
+  }
+  
+  .text .type-time {
+    font-size: 25px;
+    margin-top: -50px;
+  }
+
+  .clock.row {
+    display: flex;
+    justify-items: flex-start;
+    max-width: 100%;
+    height: 59%;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 9%;
+  }
+  .clock-item.clock-days.countdown-time-value.col-sm-6.col-md-3 {
+    max-width: 100%;
+  }
+  .clock-item.clock-hours.countdown-time-value.col-sm-6.col-md-3{
+    max-width: 100%;
+  }
+  .clock-item.clock-minutes.countdown-time-value.col-sm-6.col-md-3{
+    max-width: 100%;
+  }
+  .clock-item.clock-seconds.countdown-time-value.col-sm-6.col-md-3{
+    max-width: 100%;
+  }
+  #count .heading-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  
+  /* Front text */
+  #count .front-text {
+    font-size: 50px;
+    color: #fff;
+    font-family: 'NTBrickSans', sans-serif;
+    position: absolute;
+    margin-top: 3%;
+    top: 50%;
+    left: auto;
+    transform: translateY(-50%);
+    z-index: 2;
+    transition: transform 0.3s, z-index 0.3s;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
