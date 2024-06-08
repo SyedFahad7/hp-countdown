@@ -1,0 +1,177 @@
+@media only screen and (min-width: 481px) and (max-width: 1024px){
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      /* Body styles */
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-image: linear-gradient(to right, #5a1929, #312424, #5a1929); /* Gradient background */
+      }
+      html {
+        height: 100%;
+      }
+      
+      body {
+        height: 100%;
+        margin: 0;
+        overflow-y: auto; /* Allow vertical scrolling */
+        overflow-x: hidden; /* Hide horizontal scrolling */
+      }
+      
+      @font-face {
+        font-family: 'Montserrat Semi-Bold';
+        src: url('fonts/static/Montserrat-SemiBold.ttf') format('woff2'),
+             url('fonts/static/Montserrat-SemiBold.ttf') format('woff'); /* Specify correct paths */
+        font-weight: 600; /* Semi-bold font weight */
+        font-style: normal; 
+      }
+      
+      @font-face {
+        font-family: 'Montserrat Bold';
+        src: url('fonts/static/Montserrat-Bold.ttf') format('woff2'),
+             url('fonts/static/Montserrat-Bold.ttf') format('woff'); /* Specify correct paths */
+        font-weight: bold; /* Bold font weight */
+        font-style: normal; 
+      }
+      
+      @font-face {
+        font-family: 'Poppins Semi-Bold';
+        src: url('fonts/poppins/Poppins-SemiBold.ttf') format('woff2'),
+             url('fonts/poppins/Poppins-SemiBold.ttf') format('woff');
+        font-weight: bold; /* Bold font weight */
+        font-style: normal; 
+      }
+      
+      @font-face {
+        font-family: 'Bricks Sans';
+        src: url('fonts/brics/HvDTrial_BrixSans-Regular-BF64c3379310193.otf') format('woff2'), /* Modern Browsers */
+             url('fonts/brics/HvDTrial_BrixSans-Regular-BF64c3379310193.otf') format('woff'); /* Legacy Browsers */
+        font-weight: normal; 
+        font-style: normal; 
+      }
+      
+      @font-face {
+        font-family: 'NTBrickSans';
+        src: url('fonts/NTBrickSans/NTBrickSans.woff2') format('woff2'),
+             url('fonts/NTBrickSans/NTBrickSans.woff') format('woff'),
+             url('fonts/NTBrickSans/NTBrickSans.ttf') format('truetype'),
+             url('fonts/NTBrickSans/NTBrickSans.otf') format('truetype');
+        font-weight: normal;
+        font-style:normal;
+      }
+      
+      .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+      
+      .video-background video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+      
+      }
+      .countdown-container {
+        padding: 40px;
+        background-image:linear-gradient(180deg, rgba(0, 0, 0, 1) 5%, rgba(200,21,67,1) 95%, rgba(200,21,67,1) 100%);
+        border-radius: 20px;
+        margin-top: 10%;
+        margin-right: 23px;
+        margin-left: 23px;
+        background-size: 100% 200%;
+        animation: dropDown 5s infinite;
+        max-width: 100%;
+        height: 100%;
+      }
+      
+      .clock-item .inner {
+        height: 0px;
+        padding-bottom: 100%;
+        position: relative;
+        width: 75px;
+      }
+      
+      .clock-canvas {
+        background-color: rgba(255, 255, 255, .1);
+        border-radius: 50%;
+        height: 0px;
+        padding-bottom: 100%;
+      }
+      
+      .text {
+        color: #fff;
+        font-size: 30px;
+        top: -80px;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        align-items: center;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+        width: 100%;
+      }
+      
+      .text .val {
+        /* font-size: 26px; */
+        margin-top: 15px;
+      }
+      
+      .text .type-time {
+        font-size: 12px;
+      }
+      .clock-item.clock-days.countdown-time-value.col-sm-6.col-md-3 {
+        max-width:100%;
+      }
+      .clock.row {
+        display: inline-flex;
+        width: 100%;
+        gap:35px;
+        margin-left: auto;
+        margin-top: 4%;
+      }
+      .clock-item.clock-hours.countdown-time-value.col-sm-6.col-md-3{
+        max-width:100%;
+      }
+      .clock-item.clock-minutes.countdown-time-value.col-sm-6.col-md-3{
+        max-width:100%;
+      }
+      .clock-item.clock-seconds.countdown-time-value.col-sm-6.col-md-3{
+        max-width:100%;
+      }
+      #count .heading-container {
+        position: relative;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      
+      
+      
+      /* Front text */
+      #count .front-text {
+        font-size: 28px;
+        color: #fff;
+        font-family: 'NTBrickSans', sans-serif;
+        position: absolute;
+        margin-top: 3%;
+        top: 40%;
+        left: 3%;
+        transform: translateY(-50%);
+        z-index: 2;
+        transition: transform 0.3s, z-index 0.3s;
+      }
+
+
+
+
+}
