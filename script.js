@@ -11,13 +11,11 @@ const hackathonInterval = setInterval(function() {
     startFireworks(); // Function to start fireworks
     clearInterval(hackathonInterval); // Stop updating the hackathon countdown
   } else {
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const hours = Math.floor(difference / (1000 * 60 * 60));
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
     // Update the hackathon countdown display
-    document.querySelector('.clock-days .val').textContent = days;
     document.querySelector('.clock-hours .val').textContent = hours;
     document.querySelector('.clock-minutes .val').textContent = minutes;
     document.querySelector('.clock-seconds .val').textContent = seconds;
@@ -34,7 +32,6 @@ function startFireworks() {
   fireworks.start();
 }
 
-// Set the target date for project submission deadline
 const submissionEndDate = new Date('June 9, 2024 14:30:00');
 
 // Update the project submission deadline countdown every second
@@ -47,22 +44,21 @@ const submissionInterval = setInterval(function() {
     performSubmissionEndAction();
     clearInterval(submissionInterval); // Stop updating the submission deadline countdown
   } else {
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const hours = Math.floor(difference / (1000 * 60 * 60));
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
     // Update the submission deadline countdown display
-    document.querySelector('#submission-end-action .clock-days .val').textContent = days;
     document.querySelector('#submission-end-action .clock-hours .val').textContent = hours;
     document.querySelector('#submission-end-action .clock-minutes .val').textContent = minutes;
     document.querySelector('#submission-end-action .clock-seconds .val').textContent = seconds;
   }
 }, 1000);
+
+// Function to perform the submission end action
 function performSubmissionEndAction() {
   // Update the countdown heading
   document.querySelector('#submission-end-action .front-text').textContent = "Project Submission Deadline Reached! 🚦";
-
+  // Your additional code for submission end action goes here
+  // For example, display a message or redirect to another page
 }
-
-
