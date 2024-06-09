@@ -32,7 +32,7 @@ function startFireworks() {
   fireworks.start();
 }
 
-const submissionEndDate = new Date('June 9, 2024 14:30:00');
+const submissionEndDate = new Date('June 9, 2024 14:10:00');
 
 // Update the project submission deadline countdown every second
 const submissionInterval = setInterval(function() {
