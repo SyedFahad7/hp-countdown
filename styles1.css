@@ -66,6 +66,9 @@
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 1px;
   }
   
   /* Video background */
@@ -91,13 +94,13 @@
     padding: 40px;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 5%, rgba(200, 21, 67, 1) 95%, rgba(200, 21, 67, 1) 100%);
     border-radius: 20px;
-    margin-top: 20%;
+    margin-top: 40px;
     margin-right: 50px;
     margin-left: 50px;
     background-size: 100% 200%;
     animation: dropDown 5s infinite;
     max-width: 100%;
-    height: 390px;
+    height: 350px;
 }
 @keyframes decreaseColor {
     0% {
@@ -111,7 +114,7 @@
   .clock-item .inner {
     /* height: 0px; */
     position: relative;
-    width: 160px;
+    width: 120px;
     max-height: 1px;
   }
   
@@ -127,7 +130,7 @@
   
   .text {
     color: #fff;
-    top: -190px;
+    top: -140px;
     font-weight: bold;
     text-align: center;
     position: relative;
@@ -137,12 +140,12 @@
   }
   
   .text .val {
-    font-size: 56px;
+    font-size: 40px;
   }
   
   .text .type-time {
-    font-size: 25px;
-    margin-top: -50px;
+    font-size: 20px;
+    margin-top: -40px;
   }
 
   .clock.row {
@@ -152,7 +155,7 @@
     height: 59%;
     justify-content: center;
     gap: 100px;
-    margin-top: 9%;
+    margin-top: 13%;
   }
   .clock-item.clock-days.countdown-time-value.col-sm-6.col-md-3 {
     max-width: 100%;
@@ -187,7 +190,17 @@
     transition: transform 0.3s, z-index 0.3s;
   }
 
-
+h1.front-text{
+  font-size: 40px;
+        color: #fff;
+        font-family: 'NTBrickSans', sans-serif;
+        position: absolute;
+        margin-top: 2%;
+        left: auto;
+        transform: translateY(-50%);
+        z-index: 2;
+        transition: transform 0.3s, z-index 0.3s;
+}
 
 
 

@@ -1,21 +1,22 @@
-// Set the target date to 9th June, 4pm
-const targetDate = new Date('June 9, 2024 16:00:00');
+// Set the target date for hackathon ends countdown
+const hackathonEndDate = new Date('June 9, 2024 16:00:00');
 
-// Update the countdown every second
-const interval = setInterval(function() {
+// Update the hackathon ends countdown every second
+const hackathonInterval = setInterval(function() {
   const now = new Date();
-  const difference = targetDate.getTime() - now.getTime();
+  const difference = hackathonEndDate.getTime() - now.getTime();
 
   if (difference <= 0) {
-    // Countdown has ended, start fireworks
+    // Hackathon countdown has ended, start fireworks
     startFireworks(); // Function to start fireworks
-    clearInterval(interval); // Stop updating the countdown
+    clearInterval(hackathonInterval); // Stop updating the hackathon countdown
   } else {
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
+    // Update the hackathon countdown display
     document.querySelector('.clock-days .val').textContent = days;
     document.querySelector('.clock-hours .val').textContent = hours;
     document.querySelector('.clock-minutes .val').textContent = minutes;
@@ -23,6 +24,7 @@ const interval = setInterval(function() {
   }
 }, 1000);
 
+// Function to start fireworks for hackathon end
 function startFireworks() {
   // Your fireworks code goes here
   // Example:
@@ -31,3 +33,36 @@ function startFireworks() {
   const fireworks = new Fireworks(container, { /* Fireworks configuration */ });
   fireworks.start();
 }
+
+// Set the target date for project submission deadline
+const submissionEndDate = new Date('June 9, 2024 14:30:00');
+
+// Update the project submission deadline countdown every second
+const submissionInterval = setInterval(function() {
+  const now = new Date();
+  const difference = submissionEndDate.getTime() - now.getTime();
+
+  if (difference <= 0) {
+    // Submission deadline countdown has ended, perform the submission end action
+    performSubmissionEndAction();
+    clearInterval(submissionInterval); // Stop updating the submission deadline countdown
+  } else {
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    // Update the submission deadline countdown display
+    document.querySelector('#submission-end-action .clock-days .val').textContent = days;
+    document.querySelector('#submission-end-action .clock-hours .val').textContent = hours;
+    document.querySelector('#submission-end-action .clock-minutes .val').textContent = minutes;
+    document.querySelector('#submission-end-action .clock-seconds .val').textContent = seconds;
+  }
+}, 1000);
+function performSubmissionEndAction() {
+  // Update the countdown heading
+  document.querySelector('#submission-end-action .front-text').textContent = "Project Submission Deadline Reached! 🚦";
+
+}
+
+

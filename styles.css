@@ -18,9 +18,11 @@
     
     body {
       height: 100%;
-      margin: 0;
-      overflow-y: auto; /* Allow vertical scrolling */
-      overflow-x: hidden; /* Hide horizontal scrolling */
+      overflow-y: auto;
+      overflow-x: hidden;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 15px;
     }
     
     @font-face {
@@ -95,21 +97,16 @@
       padding: 40px;
       background-image:linear-gradient(180deg, rgba(0, 0, 0, 1) 5%, rgba(200,21,67,1) 95%, rgba(200,21,67,1) 100%);
       border-radius: 20px;
-      margin-top: 10%;
+      margin-top: 1%;
       margin-right: 50px;
       margin-left: 50px;
       background-size: 100% 200%;
       animation: dropDown 5s infinite;
       max-width: 100%;
-      height: 390px;
+      height: 300px;
     }
     
-    .clock-item .inner {
-      height: 0px;
-      padding-bottom: 100%;
-      position: relative;
-      width: 55px;
-    }
+
     
     .clock-canvas {
       background-color: transparent;
@@ -190,7 +187,17 @@
       transition: transform 0.3s, z-index 0.3s;
     }
     
-    
+    h1.front-text{
+      font-size: 40px;
+            color: #fff;
+            font-family: 'NTBrickSans', sans-serif;
+            position: absolute;
+            margin-top: 2%;
+            left: auto;
+            transform: translateY(-50%);
+            z-index: 2;
+            transition: transform 0.3s, z-index 0.3s;
+    } 
     
     
     
@@ -234,13 +241,13 @@
       background-size: 100% 200%;
       animation: dropDown 5s infinite;
       max-width: 100%;
-      height: 180px;
+      height: 160px;
     }
     
     .clock-item .inner {
       /* height: 0px; */
       position: relative;
-      width: 160px;
+      width: 120px;
       max-height: 1px;
     }
     
@@ -252,7 +259,7 @@
     
     .text {
       color: #fff;
-      top: -160px;
+      top: -120px;
       font-weight: bold;
       text-align: center;
       position: relative;
@@ -262,11 +269,11 @@
     }
     
     .text .val {
-      font-size: 56px;
+      font-size: 45px;
     }
     
     .text .type-time {
-      font-size: 29px;
+      font-size: 22px;
       margin-top: -50px;
     }
   
@@ -277,7 +284,7 @@
       height: 59%;
       justify-content: center;
       gap: 100px;
-      margin-top: 7%;
+      margin-top: 11%;
     }
     .clock-item.clock-days.countdown-time-value.col-sm-6.col-md-3 {
       width: 135px;
